@@ -18,7 +18,7 @@ from .settings_main import project_name
 
 training_dataset = DatasetArgs(
     resource_name=f"Predictive AI MLOps Starter Training Data [{project_name}]",
-    file_path="assets/コーティング製品ブリードアウトmain_train.csv",
+    file_path="assets/train.csv",
 )
 
 prediction_datasets = [DatasetArgs(
@@ -33,11 +33,11 @@ actual_dataset =  DatasetArgs(
 
 retraining_datasets = [DatasetArgs(
     resource_name=f"Predictive AI MLOps Starter Retraining Data 01 [{project_name}]",
-    file_path="../assets/再学習用データ01.csv",
+    file_path="../assets/retrain_01.csv",
 ),
                      DatasetArgs(
     resource_name=f"Predictive AI MLOps Starter Retraining Data 02 [{project_name}]",
-    file_path="../assets/再学習用データ02.csv",
+    file_path="../assets/retrain_02.csv",
 ),
 #                     DatasetArgs(
 #    resource_name=f"Predictive AI MLOps Starter Retraining Data 03 [{project_name}]",
