@@ -1,5 +1,5 @@
-name: predictive-ai-starter
-description: Predictive AI Starter
+name: predictive-ai-mlops-starter
+description: Predictive AI MLOps Starter
 runtime:
   name: python
 main: infra
@@ -7,4 +7,4 @@ config:
   pulumi:tags:
     value:
       pulumi:template: python
-  datarobot:tracecontext: predictive-ai-starter
+  datarobot:tracecontext: predictive-ai-mlops-starter
