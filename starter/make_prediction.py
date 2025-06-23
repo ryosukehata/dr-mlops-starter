@@ -23,6 +23,13 @@ def preprocess_prediction_dataset(dataset: pd.DataFrame) -> pd.DataFrame:
     pd.DataFrame :
         Preprocessed dataset
     """
+    if 'date_col' in dataset.columns and pd.to_datetime(dataset["date_col"]).min() == pd.to_datetime('2025-03-10'):
+        dataset["date_col"] = pd.to_datetime(dataset["date_col"])
+    
+        current_date = pd.Timestamp.today().normalize() # 時間情報を省き、日付のみにする
+        time_difference = current_date - dataset["date_col"].max() + pd.Timedelta(days=7)
+
+        dataset['date_col'] = dataset['date_col'] + time_difference
     return dataset
 
 
